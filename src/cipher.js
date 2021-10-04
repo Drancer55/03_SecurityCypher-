@@ -1,5 +1,5 @@
 //Variables con los datos ingresados por el usuario
-const texto = document.getElementById("textToCipher")
+const texto = document.getElementById("cipher")
 const llave = document.getElementById("chooseNumber")
 //Arrow function de cifrado
 const cifrado = () => {
