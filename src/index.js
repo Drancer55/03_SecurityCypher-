@@ -1,80 +1,22 @@
-//a nivel de BOM
-window.cipher = {
-  //arrow function de codificado
-  encode : (cifrar,offset) => {
-    console.log("Inicia cifrado")
-    //variable local que opera el cifrado
-    let cifrado = "";
-    let getCodeNumber = "";
-    for(let i=0; i<cifrar.length; i++) {
-      console.log("Se ha iniciado el codificado");
-      if (cifrar[i].charCodeAt() >= 33 && cifrar[i].charCodeAt() <= 64){
-        getCodeNumber = (cifrar[i]);
-        cifrado += getCodeNumber;
-        console.log(cifrado);
-      } else if (cifrar[i].charCodeAt() >= 123 && cifrar[i].charCodeAt() <= 254) {
-        getCodeNumber = (cipher[i]);
-        cifrado += getCodeNumber;
-      } else if (cifrar[i].charCodeAt() ==32) {
-        let spaces = " ";
-        cifrado += spaces;
-        console.log("Espacio leído");
-        //busqueda de MAYÚSCULAS (65-90)
-      } else if (cifrar[i].charCodeAt >=65 && cifrar[i].charCodeAt() <= 90) {
-        let upper = (cifrar[i].charCodeAt()-65 + offset) % 26 + 65;
-        let getCodeNumber = String.fromCharCode(upper);
-        cifrado += getCodeNumber;
-        console.log("Mayúscula leida"); //Así viene en el ejemplo
-        console.log(getCodeNumber);
-        //busqueda de minúsculas (97-122)
-      } else if (cifrar[i].charCodeAt() >= 97 && cifrar[i].charCodeAt <= 122) {
-        let lower =(cifrar[i].charCodeAt() -97 + offset) % 26 + 97;
-        let getCodeNumber = String.fromCharCode(lower);
-        cifrado += getCodeNumber;
-        console.log("minúscula leída")
-        console.log(getCodeNumber);
-      } console.log(cifrado);
-    }
-    return cifrado;
-  },
+//Variables con los datos ingresados por el usuario
+const texto = document.getElementById("cipher")
+const llave = document.getElementById("chooseNumber")
+console.log(texto);
+console.log(llave);
 
-  decode : (textl,offset) => {
-    console.log("Inicia el descifrado") //Variable que guarda el proceso anterior (¿¿??)
-    let descifrado = "";
-    let getCodeNumber = "";
-    //se especifica el numero de iteraciones con un FOR
-    for (let i=0; i<textl.length; i++) {
-      console.log("Inicia el decodificado");
-    if (textl[i].charCodeAt() >= 33 && textl[i].charCodeAt() <= 64) {
-      getCodeNumber = (textl[i]);
-      descifrado += getCodeNumber;
-      console.log(descifrado);
-      //Detecta los espacios en el texto
-    } else if (textl[i].charCodeAt() >= 123 && textl[i].charCodeAt() <=254) {
-      getCodeNumber = (textl[i]);
-      descifrado += getCodeNumber;
-    } else if (textl[i].charCodeAt() == 32) {
-      let spaces = " ";
-      descifrado += spaces;
-      console.log ("Espacio leído")
-      // Buscar MAYÚSCULAS (65-97)
-    } else if (textl[i].charCodeAt() >=65 && textl[i].charCodeAt() <= 90) {
-      let upper = (textl[i].charCodeAt() - 90 - offset) % 26 + 90;
-      let getCodeNumber = String.fromCharCode(upper);
-      descifrado += getCodeNumber;
-      console.log("Mayúscula leída");
-      console.log(getCodeNumber);
-      //Buscar minúsculas (97-22)
-    } else if (textl[i].charCodeAt() >= 97 && textl[i].charCodeAt <= 122) {
-      let lower = (textl[i].charCodeAt() - 122 - offset) % 26 + 122;
-      let getCodeNumber = String.fromCharCode(lower);
-      descifrado += getCodeNumber;
-      console.log("minúscula leída");
-      console.log(getCodeNumber);
-    }
-    console.log(descifrado);
-    console.log("Final")
-  }
-  return descifrado;
-  }
-};
+//Arrow function de cifrado
+const cifrado = () => {
+let cifrar = texto.value;
+let offset = parseInt(llave.value);
+document.getElementById('encodeM').innerHTML = "Tu mensaje cifrado: " + cipher.encode(cifrar,offset); //Se escribe en el DOM con el ID
+console.log(cipher.encode(cifrar,offset));
+}
+
+//Arrow function de decifrado
+const decifrado = () => {
+let textl = texto.value;
+let offset = parseInt(llave.value);
+document.getElementById('decodeM').innerHTML = "Tu mensaje descifrado: " + cipher.decode(textl,offset);
+console.log(cipher.decode(textl,offset))
+}
+
