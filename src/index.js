@@ -1,5 +1,5 @@
 //a nivel de BOM
-window.cipher ={
+window.cipher = {
   //arrow function de codificado
   encode : (cifrar,offset) => {
     console.log("Inicia cifrado")
