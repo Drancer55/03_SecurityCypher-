@@ -13,7 +13,7 @@ console.log(cipher.encode(cifrar,offset));
 const decifrado = () => {
 let textl = texto.value;
 let offset = parseInt(clave.value);
-document.getElementById('decode').innerHTML = "Tu mensaje descifrado: " + cipher.decode(textl,offset);
+document.getElementById('decodeM').innerHTML = "Tu mensaje descifrado: " + cipher.decode(textl,offset);
 console.log(cipher.decode(textl,offset))
 }
 
