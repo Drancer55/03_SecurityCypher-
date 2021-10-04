@@ -33,7 +33,7 @@ Se suguiere que se cree también una función cipher.createCipherWithOffset () q
 
 ## **5. Diagrama de flujo**
 
-![Diagrama](./src/assets/Diagrama_borrador.jpeg)
+![Diagrama](./src/assets/flujo.png)
 
 ---
 ## **6. Diseño de Interfaz**
