@@ -1,6 +1,8 @@
 //Variables con los datos ingresados por el usuario
 const texto = document.getElementById("cipher")
 const llave = document.getElementById("chooseNumber")
+console.log(texto);
+console.log(llave);
 //Arrow function de cifrado
 const cifrado = () => {
 let cifrar = texto.value;
