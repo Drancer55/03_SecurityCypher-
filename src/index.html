@@ -4,10 +4,48 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/69a219632b.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <!--Instrucciones de uso-->
+    <div>
+    <ul class="tutorial">Instrucciones:
+      <li>Elige y recuerda un numero de llave</li>
+      <li>Escribe tu mensaje</li>
+      <li>Elige codificar y/o decodificar el mensaje</li>
+    </ul>
+<!--Botones con los que vamos a jugar-->
+    <input type="password" id="chooseNumber" placeholder="Introduce tu número de llave">
+    <input type="text" id="cipher" placeholder="Escribe el texto que quieras cifrar">
+    <input type="button" value="Codifica este mensaje" onclick="cifrar()">
+    <input type="button" value="Decodifica este mensaje" onclick="decifrar">
+    <!--Se escriben los resultados en el HTML-->
+    <div id="encode"></div>
+    <div id="decode"></div>
+
+    <!--Pie de página / créditos-->
+  <footer class="foot">
+    &#169 CDMX MMXXI "Caesar-Cipher" Created in collaboration by:  
+    <br>
+    Fernanda  
+    <a href="https://twitter.com/maferfajardo" target="_blank" class="btn"><i class="fab fa-twitter"></i> Twitter</a>
+    <a href="https://www.linkedin.com/in/fernanda-fajardo-6a83b4216/" target="_blank" class="btn"><i class="fab fa-linkedin"></i> Linkedin</a>
+    </br>
+    <br>
+    Elias  
+      <a href="" target="_blank" class="btn"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="https://www.linkedin.com/in/el%C3%ADas-hern%C3%A1ndez-elibabah-5b85b5100/" target="_blank" class="btn"><i class="fab fa-linkedin"></i> Linkedin</a>
+    </br>
+    <br>
+    Oscar  
+      <a href="http://twitter.com/DrancerLeCourt?s=09" target="_blank" class="btn"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="https://www.linkedin.com/in/oscar-ruiz-antonio/" target="_blank" class="btn"><i class="fab fa-linkedin"></i> Linkedin</a>
+    </br>
+  </footer>
+  <!--Java Script por default-->
+  <div id="root"></div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
+  </div>
   </body>
 </html>
