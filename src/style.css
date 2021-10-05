@@ -1,3 +1,30 @@
-#tutorial{
+#tutorial {
     list-style-type: upper-roman;
+}
+
+
+/*--------------------------------F O O T E R----------------------------------*/
+
+footer {
+    background-color: #000;
+    background-size: cover;
+    position: relative;
+    color: #FFF;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+#social ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+}
+
+#social ul a {
+    font-size: 30px;
+    margin: 0px 10px;
+    color: #8F00FF;
+    position: relative;
 }
