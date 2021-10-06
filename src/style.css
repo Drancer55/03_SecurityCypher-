@@ -39,6 +39,7 @@ main {
     width: 100%;
     justify-content: space-between;
     height: 100%;
+    column-gap: 20px;
     /*min-height: calc(100vh -20vh -100px);*/
     background: #232526;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
