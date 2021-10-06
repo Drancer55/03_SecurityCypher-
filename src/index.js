@@ -3,16 +3,16 @@ let user = prompt("Usuario: ");
 let password = prompt ("Contraseña: ");
 
 function acceso () {
-    var userName = "Antonio";
+    var userName = "'Antonio', 'Javier'";
     var passWord = "12345"
     if (user == userName && passWord == password){
         document.hidden = true;
         alert("Hola Bienvenido")
     } else {
+        document.hidden = false
         alert("Acceso denegado")
     }
 }
-
 
 //Variables con los datos ingresados por el usuario
 const texto = document.getElementById("cipher")
