@@ -18,18 +18,20 @@
     <main id="ocultar"><!--Se agrega el Id coultar para acceder a el desde JS y activar la propiedad hidden-->
         
     <!-----------------------------Instrucciones de uso-------------------------------------------->
-        <div>
-            <ul class="tutorial">Instrucciones:
+        <div class="instrucciones">
+            <ul>Instrucciones:
                 <li>Elige y recuerda un numero de llave</li>
                 <li>Escribe tu mensaje</li>
                 <li>Elige codificar y/o decodificar el mensaje</li>
             </ul>
+        </div>    
             <!--Botones con los que vamos a jugar-->
+            <div class="botones">
             <input type="password" id="chooseNumber" placeholder="Introduce tu número de llave">
             <input type="text" id="cipher" placeholder="Escribe el texto que quieras cifrar">
             <input type="button" value="Codifica este mensaje" onclick="cifrado()">
             <input type="button" value="Decodifica este mensaje" onclick="decifrado()">
-            <div></div>
+            </div>
             <!--Se escriben los resultados en el HTML-->
             <div id="encodeM"></div>
             <div id="decodeM"></div>
