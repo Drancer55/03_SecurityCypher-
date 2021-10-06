@@ -3,6 +3,7 @@ window.cipher = {
   //arrow function de codificado
   encode : (cifrar,offset) => {
     console.log("Inicia cifrado")
+
     //variable local que opera el cifrado
     let cifrado = "";
     let getCodeNumber = "";
@@ -19,6 +20,7 @@ window.cipher = {
         let spaces = " ";
         cifrado += spaces;
         console.log("Espacio leído");
+
         //busqueda de MAYÚSCULAS (65-90)
       } else if (cifrar[i].charCodeAt >=65 && cifrar[i].charCodeAt() <= 90) {
         let upper = (cifrar[i].charCodeAt()-65 + offset) % 26 + 65;
@@ -26,6 +28,7 @@ window.cipher = {
         cifrado += getCodeNumber;
         console.log("Mayúscula leida"); //Así viene en el ejemplo
         console.log(getCodeNumber);
+
         //busqueda de minúsculas (97-122)
       } else if (cifrar[i].charCodeAt() >= 97 && cifrar[i].charCodeAt <= 122) {
         let lower =(cifrar[i].charCodeAt() -97 + offset) % 26 + 97;
@@ -42,6 +45,7 @@ window.cipher = {
     console.log("Inicia el descifrado") //Variable que guarda el proceso anterior (¿¿??)
     let descifrado = "";
     let getCodeNumber = "";
+
     //se especifica el numero de iteraciones con un FOR
     for (let i=0; i<textl.length; i++) {
       console.log("Inicia el decodificado");
@@ -49,6 +53,7 @@ window.cipher = {
       getCodeNumber = (textl[i]);
       descifrado += getCodeNumber;
       console.log(descifrado);
+
       //Detecta los espacios en el texto
     } else if (textl[i].charCodeAt() >= 123 && textl[i].charCodeAt() <=254) {
       getCodeNumber = (textl[i]);
@@ -57,6 +62,7 @@ window.cipher = {
       let spaces = " ";
       descifrado += spaces;
       console.log ("Espacio leído")
+
       // Buscar MAYÚSCULAS (65-97)
     } else if (textl[i].charCodeAt() >=65 && textl[i].charCodeAt() <= 90) {
       let upper = (textl[i].charCodeAt() - 90 - offset) % 26 + 90;
@@ -64,6 +70,7 @@ window.cipher = {
       descifrado += getCodeNumber;
       console.log("Mayúscula leída");
       console.log(getCodeNumber);
+      
       //Buscar minúsculas (97-22)
     } else if (textl[i].charCodeAt() >= 97 && textl[i].charCodeAt <= 122) {
       let lower = (textl[i].charCodeAt() - 122 - offset) % 26 + 122;

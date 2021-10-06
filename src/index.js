@@ -1,17 +1,22 @@
-//Acceso de usuario
-let user = prompt("Usuario: ");
-let password = prompt ("Contraseña: ");
+//Se declara alerta de bienvenida
+alert("Hola, Bienvenido")
 
-function acceso () {
-    var userName = "'Antonio', 'Javier'";
-    var passWord = "12345"
-    if (user == userName && passWord == password){
-        document.hidden = true;
-        alert("Hola Bienvenido")
-    } else {
-        document.hidden = false
-        alert("Acceso denegado")
-    }
+//Se declara una variable para ocultar el contenido de nuestra página
+var ocultarMain = document.getElementById("ocultar"); //Se accede al Id desde JS
+console.log(ocultarMain) //Se utiliza el console.log para confirmar el funcionamiento en el browser
+ocultarMain.style.visibility = "hidden" //Se oculta main id(ocultar) desde JS
+//Cuando el usuario ingrese la clave correcta se desactivara la propiedad hidden
+let acceso = prompt("Ingresa tu clave")//se declara una variable para que el usuario ingrese su contraseña
+console.log(acceso) //Confirmamos ue funcione desde el browser
+//Se declara la clave correcta que el usuario deberá ingresar
+let clave = "12345"
+//Si el usuario ingresa la contraseña correcta se le concederá el acceso
+if(acceso === clave){
+    alert("Acceso Concedido")
+//si la clave es correcta omitir el estilo hidden
+ocultarMain.style.visibility = ""    
+}else {
+    alert("Accesdo denegado")// Si el usuario ingresa una clave incorrecta se alertará el acceso denegado
 }
 
 //Variables con los datos ingresados por el usuario
