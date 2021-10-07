@@ -29,7 +29,7 @@ var cifra =() => {
 let cifrar = text.value;             //string
 let offset = parseInt(llave.value);  //number
 //se establece conexión con el ID del div en html para imprimr en pantalla el mensaje a cifrar
-document.getElementById('encodeM').innerHTML = "Tu mensaje cifra es: " + cipher.encode(cifrar, offset);
+document.getElementById('encodeM').innerHTML = "Tu mensaje cifrado es: " + cipher.encode(cifrar, offset);
 }
 //Se declara la arrow function de la acción descifrar:
 var descifra = () => {
