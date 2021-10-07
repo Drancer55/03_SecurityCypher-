@@ -43,6 +43,7 @@
           return cifrado; //Retorna cuantos espacios se va a desplazar para codificar el secreto
   },
 //se declara function paradecodificar (decode):
+//
     decode : (descifrar, offset) => {
         console.log("Inicio del descifrado")
 //Variables que nos ayudarán a descifrar el mensaje oculto

@@ -7,6 +7,7 @@
 body {
     background-image: url(https://previews.123rf.com/images/christianp/christianp1502/christianp150200001/36248585-codificaci%C3%B3n-virus-inform%C3%A1tico.jpg);
     -webkit-animation: marquee 100s infinite linear;
+    height: 100%;
 }
 
 @-webkit-keyframes marquee {
@@ -27,6 +28,7 @@ body::after {
     bottom: 0;
     left: 0;
     opacity: 0.7;
+    height: 110%;
 }
 
 body * {
@@ -41,53 +43,29 @@ header {
     width: 45%;
     height: auto;
     color: #FFF;
-    /*background: #232526;*/
+    background: #232526;
     /* fallback for old browsers */
-    /*background: -webkit-linear-gradient(to right, #414345, #232526);*/
+    background: -webkit-linear-gradient(to right, #414345, #232526);
     /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to right, #414345, #232526);*/
+    background: linear-gradient(to right, #414345, #232526);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-family: 'Roboto Mono', monospace;
     ;
     text-align: center;
-    padding: 2px;
-    border-radius: 10px;
-    /*opacity: 0.9;*/
+    padding: 0.1%;
+    opacity: 0.9;
     display: block;
     margin: auto;
     font-size: 70%;
-}
-
-header::after {
-    content: "";
-    background: #232526;
-    background: -webkit-linear-gradient(to right, #414345, #232526);
-    background: linear-gradient(to right, #414345, #232526);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.9;
-}
-
-header * {
-    position: relative;
-    z-index: 1;
 }
 
 
 /*---------------------Se agregan los estios al main---------------------------*/
 
 main {
-    /*display: flex;
-    flex-flow: row wrap;
-    flex-direction: column;*/
     width: 45%;
     justify-content: space-between;
     height: auto;
-    column-gap: 20px;
-    /*min-height: calc(100vh -20vh -100px);*/
     background: #232526;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);
@@ -98,33 +76,72 @@ main {
     opacity: 0.9;
     font-family: 'Roboto Mono', monospace;
     color: linen;
-    display: block;
     margin: auto;
 }
 
 .instrucciones ol {
     text-align: center;
-    padding-top: 20px;
-    font-size: 18px;
+    padding-top: 15px;
+    font-size: 80%;
     line-height: 22px;
 }
 
 .instrucciones ol li {
     text-align: justify;
-    font-size: 15px;
+    font-size: 80%;
     margin-left: 7%;
     margin-right: 8%;
     margin-top: 1%;
 }
 
 
-/*-------------botones---------------*/
+/*-------------input & button---------------*/
 
 .botones {
     text-align: center;
     line-height: 220%;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.botones input {
+    flex-wrap: wrap;
+    max-width: 80%;
+}
+
+::placeholder {
+    text-align: center;
+    background-color: rgb(65, 59, 59);
+    color: #FFF;
+}
+
+#chooseNumber {
+    background-color: #FFF;
+    width: 100%;
+    padding: 0.5%;
+}
+
+#toCipher {
+    width: 100%;
+    padding: 5%;
+    margin-top: 3%;
+}
+
+#code,
+#decode {
+    background-color: rgb(35, 66, 35);
+    border-radius: 25%;
+    padding: 1%;
+    margin-top: 5%;
+    opacity: .9;
+}
+
+#code:hover,
+#decode:hover {
+    background-color: green;
+    color: #FFF;
+    cursor: pointer;
+    padding: 1.5%;
 }
 
 
@@ -141,7 +158,7 @@ main {
 main section {
     text-align: center;
     padding-top: 5%;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
     font-size: 16px;
 }
 
@@ -166,21 +183,19 @@ footer {
     font-family: 'Roboto Mono', monospace;
     display: block;
     margin: auto;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 #social {
-    /*display: flex;
-    flex-wrap: wrap;*/
     list-style-type: none;
     justify-content: center;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 135%;
     margin-top: 1%;
 }
 
 #social a {
-    font-size: 14px;
+    font-size: 13px;
     margin: 1.5px;
     color: rgb(12, 12, 141);
     position: relative;

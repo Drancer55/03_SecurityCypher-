@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv=“X-UA-Compatible” content=“IE=edge”>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/69a219632b.js" crossorigin="anonymous"></script>
@@ -29,47 +31,47 @@
         <!-----------------Botones con los que vamos a interactuar---------------------------------------------->
         <div class="botones">
 
-        <input type="password" id="chooseNumber" placeholder="Introduce tu número de llave">
+            <input type="password" id="chooseNumber" placeholder="Introduce tu número de llave">
 
-        <input type="text" id="toCipher" placeholder="Escribe el mensaje que quieras cifrar">
+            <input type="text" id="toCipher" placeholder="Escribe el mensaje que quieres cifrar">
 
-        <input type="button" value="Codificar mensaje" onclick="cifra()">
+            <input type="button" id="code" value="Codificar mensaje" onclick="cifra()">
 
-        <input type="button" value="Decodificar mensaje" onclick="descifra()">
+            <input type="button" id="decode" value="Decodificar mensaje" onclick="descifra()">
 
-        <!------------------------Se escriben los resultados en el HTML------------------------------------>
-        <div id="encodeM"></div>
-        <div id="decodeM">
+            <!------------------------Se escriben los resultados en el HTML------------------------------------>
+            <div id="encodeM"></div>
+            <div id="decodeM">
 
-        </div>
-        <!------------------------------------Cita de Julio César------------------------------------------->
+            </div>
+            <!------------------------------------Cita de Julio César------------------------------------------->
 
-        <section>
-            <div id="quote">"Veni, vidi, vici"</div>
-            <div class="linea"></div>
-        </section>
+            <section>
+                <div id="quote">"Veni, vidi, vici"</div>
+                <div class="linea"></div>
+            </section>
     </main>
     <!-------------------------------Pie de página / créditos------------------------------------------>
     <footer class="foot">
         &#169 CDMX MMXXI "Caesar-Cipher" Created
-        <!--in collaboration-->by:
+        <!-------in collaboration------>by:
         <section id=social>
-            <!--<ul>-->
-            <!--<li>-->Fernanda Fajardo
+
+            Fernanda Fajardo
             <a href="https://twitter.com/maferfajardo" target="_blank" class="btn"><i class="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com/in/fernanda-fajardo-6a83b4216/" target="_blank" class="btn"><i class="fab fa-linkedin"></i></a>
-            <!--</li>-->
+
             </br>
-            <!--<li>-->Elibabah!
+            Elibabah!
             <a href="https://twitter.com/ElasHer59446451" target="_blank" class="btn"><i class="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com/in/el%C3%ADas-hern%C3%A1ndez-elibabah-5b85b5100/" target="_blank" class="btn"><i class="fab fa-linkedin"></i></a>
-            <!--</li>-->
+
             </br>
-            <!--<li>-->Oscar Ruiz
+            Oscar Ruiz
             <a href="http://twitter.com/DrancerLeCourt?s=09" target="_blank" class="btn"><i class="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com/in/oscar-ruiz-antonio/" target="_blank" class="btn"><i class="fab fa-linkedin"></i></a>
-            <!--</li>
-            </ul>-->
+
+
         </section>
     </footer>
     <!---------------------------------Java Script por default------------------------------------------->
