@@ -83,13 +83,13 @@ main {
 .instrucciones ol {
     text-align: center;
     padding-top: 15px;
-    font-size: 18px;
+    font-size: 80%;
     line-height: 22px;
 }
 
 .instrucciones ol li {
     text-align: justify;
-    font-size: 15px;
+    font-size: 80%;
     margin-left: 7%;
     margin-right: 8%;
     margin-top: 1%;
@@ -208,107 +208,3 @@ footer {
     color: rgba(156, 156, 160, 0.767);
 }
 
-@media only screen and (max-width: 320px) {
-    header {
-        width: 80%;
-        height: 500%;
-        margin-top: 10%;
-        font-size: 100%;
-    }
-    main {
-        width: 80%;
-    }
-    .instrucciones ol {
-        padding-top: 15px;
-        font-size: 32px;
-        line-height: 40px;
-    }
-    .instrucciones ol li {
-        text-align: justify;
-        font-size: 25px;
-        margin-left: 7%;
-        margin-right: 8%;
-        margin-top: 1%;
-    }
-    .botones {
-        text-align: center;
-        line-height: 220%;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    .botones input {
-        flex-wrap: wrap;
-        max-width: 80%;
-        padding: 10%;
-    }
-     ::placeholder {
-        text-align: center;
-        background-color: rgb(65, 59, 59);
-        color: #FFF;
-        font-size: 20px;
-        padding: 20%;
-    }
-    #chooseNumber {
-        background-color: #FFF;
-        width: 100%;
-        padding: 2%;
-    }
-    #toCipher {
-        width: 100%;
-        padding: 10%;
-        margin-top: 3%;
-    }
-    #code,
-    #decode {
-        background-color: rgb(35, 66, 35);
-        border-radius: 25%;
-        padding: 3%;
-        margin-top: 5%;
-        opacity: .9;
-    }
-    #code:hover,
-    #decode:hover {
-        background-color: green;
-        color: #FFF;
-        cursor: pointer;
-        padding: 3.5%;
-    }
-    footer {
-        width: 80%;
-        background: #000000;
-        /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #414345, #232526);
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #414345, #232526);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        background-size: cover;
-        position: relative;
-        color: linen;
-        text-align: center;
-        padding-bottom: 1%;
-        /*border-radius: 20px;*/
-        opacity: 0.9;
-        font-family: 'Roboto Mono', monospace;
-        display: block;
-        margin: auto;
-        font-size: 28px;
-    }
-    #social {
-        /*display: flex;
-    flex-wrap: wrap;*/
-        list-style-type: none;
-        justify-content: center;
-        font-size: 25px;
-        line-height: 60%;
-        margin-top: 1%;
-    }
-    #social a {
-        font-size: 13px;
-        margin: 1.5px;
-        color: rgb(12, 12, 141);
-        position: relative;
-    }
-    #social a i {
-        color: rgba(156, 156, 160, 0.767);
-    }
-}
