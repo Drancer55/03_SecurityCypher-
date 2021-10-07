@@ -76,7 +76,6 @@ main {
     opacity: 0.9;
     font-family: 'Roboto Mono', monospace;
     color: linen;
-    
     margin: auto;
 }
 
@@ -188,8 +187,6 @@ footer {
 }
 
 #social {
-    /*display: flex;
-    flex-wrap: wrap;*/
     list-style-type: none;
     justify-content: center;
     font-size: 13px;
@@ -207,4 +204,3 @@ footer {
 #social a i {
     color: rgba(156, 156, 160, 0.767);
 }
-
