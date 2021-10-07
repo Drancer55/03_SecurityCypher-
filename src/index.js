@@ -6,8 +6,8 @@ var ocultarMain = document.getElementById("ocultar"); //Se accede al Id desde JS
 console.log(ocultarMain) //Se utiliza el console.log para confirmar el funcionamiento en el browser
 ocultarMain.style.visibility = "hidden" //Se oculta main id(ocultar) desde JS
 //Cuando el usuario ingrese la clave correcta se desactivara la propiedad hidden
-let acceso = prompt("Ingresa tu clave")//se declara una variable para que el usuario ingrese su contraseña
-console.log(acceso) //Confirmamos ue funcione desde el browser
+let acceso = prompt("Por favor ingresa tu clave de acceso")//se declara una variable para que el usuario ingrese su contraseña
+console.log(acceso) //Confirmamos que funcione desde el browser
 //Se declara la clave correcta que el usuario deberá ingresar
 let clave = "12345"
 //Si el usuario ingresa la contraseña correcta se le concederá el acceso
@@ -16,7 +16,7 @@ if(acceso === clave){
 //si la clave es correcta omitir el estilo hidden
 ocultarMain.style.visibility = ""
 }else {
-    alert("Accesdo denegado")// Si el usuario ingresa una clave incorrecta se alertará el acceso denegado
+    alert("Acceso Denegado")// Si el usuario ingresa una clave incorrecta se alertará el acceso denegado
 }
 //<Codificar \ Decodificar mensajes>
 
