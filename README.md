@@ -1,4 +1,4 @@
-## **Indice**
+e## **Indice**
 
   1. Descripción
   2. Necesidades del cliente
@@ -22,7 +22,7 @@ Una aplicación que sirva para cifrar y descifrar mensajes, creada con html, css
 ---
 ## **3. Criterios de aceptación**
 
-Esta aplicación debe permitir al usuario cifrar mensajes y también permitir descifrar el mensaje. Debe ser receptivo y en una ulr para compartirlo y usarse desde un teléfono celular a otra pantalla de dispositivo como un escritorio.
+Esta aplicación debe permitir al usuario cifrar mensajes y también permitir descifrar el mensaje. Debe ser receptivo y en una URL para compartirlo y usarse desde un teléfono celular a otra pantalla de dispositivo como un escritorio.
 
 ---
 ## **4. Edición Hacker**

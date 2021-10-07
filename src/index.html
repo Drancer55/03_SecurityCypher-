@@ -20,16 +20,22 @@
                 <li>Escribe tu mensaje</li>
                 <li>Elige codificar y/o decodificar el mensaje</li>
             </ul>
-            <!--Botones con los que vamos a jugar-->
+            <!--Botones con los que vamos a interactuar-->
             <input type="password" id="chooseNumber" placeholder="Introduce tu número de llave">
-            <input type="text" id="cipher" placeholder="Escribe el texto que quieras cifrar">
-            <input type="button" value="Codifica este mensaje" onclick="cifrado()">
-            <input type="button" value="Decodifica este mensaje" onclick="decifrado()">
-            <div></div>
-            <!--Se escriben los resultados en el HTML-->
+
+            <input type="text" id="textoPorCifrar" placeholder="Escribe el texto que quieras cifrar" value="ABC">
+
+            <input type="button" id="codifica" value="Codifica este mensaje" onclick="click()">
+
+            <input type="button" id="decodifica" value="Decodifica este mensaje">
+
+            </div>
+
+            <!--Se imprimen los resultados en el HTML-->
             <div id="encodeM"></div>
             <div id="decodeM"></div>
     </main>
+
     <!--Pie de página / créditos-->
     <footer class="foot">
         &#169 CDMX MMXXI "Caesar-Cipher" Created in collaboration by:
@@ -47,7 +53,7 @@
                 </li>
                 <!---</br>--->
                 <!---</br>--->
-                <li>Óscar Ruíz
+                <li>Oscar Ruiz
                     <a href="http://twitter.com/DrancerLeCourt?s=09" target="_blank" class="btn"><i class="fab fa-twitter"></i></a>
                     <a href="https://www.linkedin.com/in/oscar-ruiz-antonio/" target="_blank" class="btn"><i class="fab fa-linkedin"></i></a>
                 </li>
