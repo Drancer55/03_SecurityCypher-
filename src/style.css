@@ -39,6 +39,7 @@ header {
     opacity: 0.9;
     display: block;
     margin: auto;
+    font-size: 70%;
 }
 
 
@@ -66,8 +67,25 @@ main {
     margin: auto;
 }
 
+.instrucciones ol {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
 .instrucciones ol li {
     text-align: justify;
+    font-size: 15px;
+    margin-left: 7%;
+}
+
+
+/*-------------botones---------------*/
+
+.botones {
+    text-align: center;
+    line-height: 200%;
 }
 
 
@@ -83,8 +101,9 @@ main {
 
 main section {
     text-align: center;
-    padding-top: 10%;
-    padding-bottom: 3%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    font-size: 16px;
 }
 
 
@@ -108,6 +127,7 @@ footer {
     font-family: 'Roboto Mono', monospace;
     display: block;
     margin: auto;
+    font-size: 15px;
 }
 
 #social {
@@ -115,15 +135,19 @@ footer {
     flex-wrap: wrap;*/
     list-style-type: none;
     justify-content: center;
+    font-size: 13px;
+    line-height: 135%;
+    margin-top: 1%;
 }
 
 #social a {
-    font-size: 20px;
-    margin: 0px 10px;
-    color: blue;
+    font-size: 13px;
+    margin: 1px;
+    color: rgb(12, 12, 141);
     position: relative;
 }
 
-#social a i {
+
+/*#social a i {
     color: blue;
-}
+}*/
