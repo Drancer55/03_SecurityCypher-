@@ -10,7 +10,7 @@ let acceso = prompt("Por favor, ingresa tu clave de acceso") //se declara una va
 console.log(acceso) //Confirmamos que funcione desde el browser
     //Se declara la clave correcta que el usuario deberá ingresar
 let clave = "12345"
-<<<<<<< HEAD
+
 //Si el usuario ingresa la contraseña correcta se le concederá el acceso
 if(acceso === clave){
     alert("Acceso Concedido")
@@ -18,7 +18,7 @@ if(acceso === clave){
 ocultarMain.style.visibility = ""
 }else {
     alert("Acceso denegado")// Si el usuario ingresa una clave incorrecta se alertará el acceso denegado
-=======
+
     //Si el usuario ingresa la contraseña correcta se le concederá el acceso
 if (acceso === clave) {
     alert("Acceso concedido")
@@ -26,7 +26,7 @@ if (acceso === clave) {
     ocultarMain.style.visibility = ""
 } else {
     alert("Acceso denegado") // Si el usuario ingresa una clave incorrecta se alertará el acceso denegado
->>>>>>> 8e2cac1c6b0163bd271e48008a435fc9c9a70b93
+
 }
 //<Codificar \ Decodificar mensajes>
 //Codificar
@@ -35,7 +35,7 @@ let text = document.getElementById("toCipher"); //string
 let llave = document.getElementById("chooseNumber"); //number
 console.log(text);
 //se declara la function para cifrar el texto ingresado
-<<<<<<< HEAD
+
 var cifra =() => {
 let cifrar = text.value;             //string
 let offset = parseInt(llave.value);  //number
@@ -44,7 +44,7 @@ document.getElementById('encodeM').innerHTML = "Tu mensaje cifrado es: " + ciphe
 }
 //Decodificar
 //Se declara la arrow function de la acción descifrar:
-=======
+
 var cifra = () => {
         let cifrar = text.value; //string
         let offset = parseInt(llave.value); //number
@@ -52,11 +52,12 @@ var cifra = () => {
         document.getElementById('encodeM').innerHTML = "Tu mensaje cifrado es: " + cipher.encode(cifrar, offset);
     }
     //Se declara la arrow function de la acción descifrar:
->>>>>>> 8e2cac1c6b0163bd271e48008a435fc9c9a70b93
+
 var descifra = () => {
     let descifrar = text.value;
     let offset = parseInt(llave.value);
     //Se establece conexión con el ID del div en html para imprimr en pantalla el mensaje a descifrar
     document.getElementById('decodeM').innerHTML = "Tu mensaje descifrado es:  \n " + cipher.decode(descifrar, offset);
     console.log(cipher.decode(descifrar, offset));
+}
 }
