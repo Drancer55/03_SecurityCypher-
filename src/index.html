@@ -13,51 +13,58 @@
     <header>
         <h1>Caesar Cipher</h1>
     </header>
-    
+
     <!------------Se agrega main para mantener unido el contenido principal del la página------------->
-    <main id="ocultar"><!--Se agrega el Id coultar para acceder a el desde JS y activar la propiedad hidden-->
-        
-    <!-----------------------------Instrucciones de uso-------------------------------------------->
+    <main id="ocultar">
+        <!--Se agrega el Id coultar para acceder a el desde JS y activar la propiedad hidden-->
+
+        <!-----------------------------Instrucciones de uso-------------------------------------------->
         <div class="instrucciones">
-            <ul>Instrucciones:
+            <ol>Instrucciones:
                 <li>Elige y recuerda un numero de llave</li>
                 <li>Escribe tu mensaje</li>
                 <li>Elige codificar y/o decodificar el mensaje</li>
-            </ul>
-        </div>    
-            <!--Botones con los que vamos a jugar-->
-            <div class="botones">
+            </ol>
+        </div>
+        <!--Botones con los que vamos a jugar-->
+        <div class="botones">
             <input type="password" id="chooseNumber" placeholder="Introduce tu número de llave">
             <input type="text" id="cipher" placeholder="Escribe el texto que quieras cifrar">
             <input type="button" value="Codifica este mensaje" onclick="cifrado()">
             <input type="button" value="Decodifica este mensaje" onclick="decifrado()">
-            </div>
-            <!--Se escriben los resultados en el HTML-->
-            <div id="encodeM"></div>
-            <div id="decodeM"></div>
+        </div>
+        <!--Se escriben los resultados en el HTML-->
+        <div id="encodeM"></div>
+        <div id="decodeM"></div>
+        <!--Cita de Julio César-->
+
+        <section>
+            <div>"Veni, vidi, vici"</div>
+            <div class="linea"></div>
+        </section>
     </main>
     <!-------------------------------Pie de página / créditos------------------------------------------>
     <footer class="foot">
-        &#169 CDMX MMXXI "Caesar-Cipher" Created in collaboration by:
+        &#169 CDMX MMXXI "Caesar-Cipher" Created
+        <!--in collaboration-->by:
         <section id=social>
-            <ul>
-                <li>Fernanda Fajardo
-                    <a href="https://twitter.com/maferfajardo" target="_blank" class="btn"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/fernanda-fajardo-6a83b4216/" target="_blank" class="btn"><i class="fab fa-linkedin"></i></a>
-                </li>
-                <!---</br>--->
-                <!---</br>--->
-                <li>Elías Hernández
-                    <a href="https://twitter.com/ElasHer59446451" target="_blank" class="btn"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/el%C3%ADas-hern%C3%A1ndez-elibabah-5b85b5100/" target="_blank" class="btn"><i class="fab fa-linkedin"></i></a>
-                </li>
-                <!---</br>--->
-                <!---</br>--->
-                <li>Óscar Ruíz
-                    <a href="http://twitter.com/DrancerLeCourt?s=09" target="_blank" class="btn"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/oscar-ruiz-antonio/" target="_blank" class="btn"><i class="fab fa-linkedin"></i></a>
-                </li>
-            </ul>
+            </br>
+            <!--<ul>-->
+            <!--<li>-->Fernanda Fajardo
+            <a href="https://twitter.com/maferfajardo" target="_blank" class="btn"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/fernanda-fajardo-6a83b4216/" target="_blank" class="btn"><i class="fab fa-linkedin"></i></a>
+            <!--</li>-->
+            </br>
+            <!--<li>-->Elibabah!
+            <a href="https://twitter.com/ElasHer59446451" target="_blank" class="btn"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/el%C3%ADas-hern%C3%A1ndez-elibabah-5b85b5100/" target="_blank" class="btn"><i class="fab fa-linkedin"></i></a>
+            <!--</li>-->
+            </br>
+            <!--<li>-->Óscar Ruíz
+            <a href="http://twitter.com/DrancerLeCourt?s=09" target="_blank" class="btn"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/oscar-ruiz-antonio/" target="_blank" class="btn"><i class="fab fa-linkedin"></i></a>
+            <!--</li>
+            </ul>-->
         </section>
     </footer>
     <!---------------------------------Java Script por default------------------------------------------->

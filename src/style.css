@@ -22,7 +22,7 @@ body {
 /*-------------------Se agregan los estilos al header---------------------------*/
 
 header {
-    width: 38%;
+    width: 45%;
     height: auto;
     color: #FFF;
     background: #232526;
@@ -47,7 +47,7 @@ header {
 main {
     display: flex;
     flex-flow: row wrap;
-    width: 38%;
+    width: 45%;
     justify-content: space-between;
     height: 100%;
     column-gap: 20px;
@@ -58,7 +58,7 @@ main {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #414345, #232526);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border-radius: 40px;
+    /*border-radius: 40px;*/
     opacity: 0.9;
     font-family: 'Roboto Mono', monospace;
     color: linen;
@@ -66,11 +66,32 @@ main {
     margin: auto;
 }
 
+.instrucciones ol li {
+    text-align: justify;
+}
+
+
+/*--------cita y línea divisoria-----------*/
+
+.linea {
+    border-top: 1px solid black;
+    height: 2px;
+    width: 88%;
+    padding: 0;
+    margin: 20px auto 0 auto;
+}
+
+main section {
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 3%;
+}
+
 
 /*--------------------------------F O O T E R----------------------------------*/
 
 footer {
-    width: 38%;
+    width: 45%;
     background: #232526;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);
@@ -81,28 +102,28 @@ footer {
     position: relative;
     color: linen;
     text-align: center;
-    padding: 1%;
-    border-radius: 20px;
+    padding-bottom: 1%;
+    /*border-radius: 20px;*/
     opacity: 0.9;
     font-family: 'Roboto Mono', monospace;
     display: block;
     margin: auto;
 }
 
-#social ul {
-    display: flex;
-    flex-wrap: wrap;
+#social {
+    /*display: flex;
+    flex-wrap: wrap;*/
     list-style-type: none;
     justify-content: center;
 }
 
-#social ul a {
-    font-size: 25px;
+#social a {
+    font-size: 20px;
     margin: 0px 10px;
     color: blue;
     position: relative;
 }
 
-#social ul a i {
+#social a i {
     color: blue;
 }
