@@ -58,37 +58,13 @@ header {
     font-size: 70%;
 }
 
-
-/*header::after {
-    content: "";
-    background: #232526;
-    background: -webkit-linear-gradient(to right, #414345, #232526);
-    background: linear-gradient(to right, #414345, #232526);
-    position: relative;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.9;
-}
-
-header * {
-    position: absolute;
-    z-index: 1;
-}*/
-
-
 /*---------------------Se agregan los estios al main---------------------------*/
 
 main {
-    /*display: flex;
-    flex-flow: row wrap;
-    flex-direction: column;*/
     width: 45%;
     justify-content: space-between;
     height: auto;
     column-gap: 20px;
-    /*min-height: calc(100vh -20vh -100px);*/
     background: #232526;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);
