@@ -5,7 +5,8 @@
   3. Criterio de aceptación
   4. Edición Hacker
   5. Diagrama de Flujo
-  6. Diseño de Interfaz
+  6. Maquetación
+  7. Producto final
 
 ---
 ## **1. Descripción**
@@ -38,4 +39,8 @@ Se suguiere que se cree también una función cipher.createCipherWithOffset () q
 ---
 ## **6. Diseño de Interfaz**
 
-![Diseño de interfaz](./src/assets/D.I.Corregido.png)
+![Maquetación](./src/assets/Maquetacion.png)
+
+## **7. Producto final**
+
+![Producto_final](./src/assets/Final_product.png)
