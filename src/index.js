@@ -16,13 +16,13 @@ if(acceso === clave){
 //si la clave es correcta omitir el estilo hidden
 ocultarMain.style.visibility = ""
 }else {
-    alert("Accesdo denegado")// Si el usuario ingresa una clave incorrecta se alertará el acceso denegado
+    alert("Acceso denegado")// Si el usuario ingresa una clave incorrecta se alertará el acceso denegado
 }
 //<Codificar \ Decodificar mensajes>
-
+//Codificar
 //Estos datos se asignan a las variables "text" y "llave" mediante los input en HTML con los que el usuario interatua en la UI
-let text = document.getElementById("toCipher");
-let llave = document.getElementById("chooseNumber");
+let text = document.getElementById("toCipher"); //string
+let llave = document.getElementById("chooseNumber"); //number
 console.log(text);
 //se declara la function para cifrar el texto ingresado
 var cifra =() => {
@@ -31,6 +31,7 @@ let offset = parseInt(llave.value);  //number
 //se establece conexión con el ID del div en html para imprimr en pantalla el mensaje a cifrar
 document.getElementById('encodeM').innerHTML = "Tu mensaje cifrado es: " + cipher.encode(cifrar, offset);
 }
+//Decodificar
 //Se declara la arrow function de la acción descifrar:
 var descifra = () => {
 let descifrar = text.value;

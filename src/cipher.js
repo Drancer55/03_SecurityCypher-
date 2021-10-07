@@ -69,8 +69,8 @@
           console.log("Espacio decodificado");
 //65 al 97 ASCII corresponde a las mayúsculas
       } else if (descifrar[i].charCodeAt() >= 65 && descifrar[i].charCodeAt() <= 90) {
-        let upper = (descifrar[i].charCodeAt()- 90 - offset) % 26 + 90;
-        let codeNumber = String.fromCharCode(upper); //El String.fromCharCode() método estático que devuelve una cadena creada mediante el uso de una secuencia de valores Unicode especificada.
+        let mayusculas = (descifrar[i].charCodeAt()- 90 - offset) % 26 + 90;
+        let codeNumber = String.fromCharCode(mayusculas); //El String.fromCharCode() método estático que devuelve una cadena creada mediante el uso de una secuencia de valores Unicode especificada.
           descifrado += codeNumber;
           console.log("Mayúscula decodificada");
           console.log(codeNumber);
