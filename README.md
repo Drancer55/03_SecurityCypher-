@@ -38,4 +38,4 @@ Se suguiere que se cree también una función cipher.createCipherWithOffset () q
 ---
 ## **6. Diseño de Interfaz**
 
-![Diseño de interfaz](./src/assets/D.Interfaz.png)
+![Diseño de interfaz](./src/assets/D.I.Corregido.png)

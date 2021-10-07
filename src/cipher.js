@@ -1,39 +1,90 @@
-//a nivel de BOM
-window.cipher = {
-  //arrow function de codificado
-  encode: function encode (offset,cifrar) {
-    console.log("function encode activada") // => Función  //variable local que opera el cifrado de MAYÚSCULAS
-    if(!(typeof(cifrar)==='string')){
-      let noEs = "Error, ingrese una cadena de caracteres"
-      return  noEs
-    }
+//funciones del objeto window
+  window.cipher = {
+//se declara function de codificado (encode):
+    encode : (cifrar, offset) => {
+    console.log("Inicia cifrado");
+//Variables que se necesitan para el cifrado
+//Cada bloque local se refiere a un cierto tipo de carácteres especiales, se divide así para facilitar codificar y decodificar mensajes de acuerdo a un subgrupo (mayúsculas, minúsculas, espacios y carácteres especiales respectivamente)
     let cifrado = "";
-    console.log(offset,cifrar)
-    console.log(typeof(offset))
-    //se declara un for para iterar el string que se va a codificar
-    for(let i=0; i< cifrar.length; i++) {
-      console.log(cifrar.length)
-
-      if (cifrar.charCodeAt(i)>=65 && cifrar.charCodeAt(i) <=90) {  //Se toma el código ASCII del rango de 65 a 90
-        cifrado= cifrado + String.fromCharCode((cifrar.charCodeAt(i) + offset -65) %26+65)
-        console.log(cifrado);
-        return cifrado;
-
-      } else if (cifrar.charCodeAt(i)>=97 && cifrar.charCodeAt(i) <= 122) {
-        cifrado = cifrado + String.fromCharCode((cifrar.charCodeAt(i) + offset -97) %26 + 97)
-        console.log(cifrado);
-        return cifrado;
-
-      } else  {
-        cifrado = cifrado + String.fromCharCode(cifrar.charCodeAt(i))
-        console.log(typeof(cifrar))
-        console.log(cifrado);
-        return cifrado;
+    let codeNumber = "";
+      for(let i=0; i<cifrar.length; i++) {    //iteraciones, cifrar.length determinará cuantas "vueltas" dará para encontrar el carácter correspondiente al cifrado
+//De acuerdo con el número que abarcan los códigos del abecedario en American Standard Code for Information Interchange (ASCII) buscaremos los parámetros (en este caso de 32 al 64 para números y carácteres como "%&/())
+//Cada console.log muestra que el código pasa y lo "lee" imprimiendolo en la consola del Browser
+      if (cifrar[i].charCodeAt() >= 33 && cifrar[i].charCodeAt() <= 64) {
+        codeNumber = (cifrar[i]);
+        cifrado += codeNumber;
+          console.log("Números y/o simbolos codificados")
+//los carácteres que se abarcan en este bloque corresponden a letras con acentos y carácteres especiales (del 123 al 254 ASCII) por ejemplo: ñ{á}éçó
+      } else if (cifrar[i].charCodeAt() >= 123 && cifrar[i].charCodeAt() <= 254) {
+        codeNumber = (cipher[i]);
+        cifrado += codeNumber;
+        console.log("Carácter especial codificado")
+//32 ASCII corresponde al carácter "space"
+      } else if (cifrar[i].charCodeAt() == 32) {
+        let space = " ";
+        cifrado += space;
+        console.log("Espacio codificado");
+//65 al 90 ASCII corresponde a las mayúsculas
+      } else if (cifrar[i].charCodeAt() >= 65 && cifrar[i].charCodeAt() <= 90) {
+        let upper = (cifrar[i].charCodeAt()- 65 + offset) % 26 + 65; //26 letras del abecedario
+        let codeNumber = String.fromCharCode(upper);                 //El String.fromCharCode() método estático que devuelve una cadena creada mediante el uso de una secuencia de valores Unicode especificada.
+        cifrado += codeNumber;
+        console.log("Mayúscula codificada");
+        console.log(codeNumber);
+//del 97 al 122 ASCII corresponde a las minúsculas
+      } else if (cifrar[i].charCodeAt() >= 97 && cifrar[i].charCodeAt() <= 122) {
+        let lower = (cifrar[i].charCodeAt() - 97 + offset) % 26 + 97; //26 letras del abecedario
+        let codeNumber = String.fromCharCode(lower);                  //El String.fromCharCode() método estático que devuelve una cadena creada mediante el uso de una secuencia de valores Unicode especificada.
+        cifrado += codeNumber;
+        console.log("Minúscula codificada");
+        console.log(codeNumber);
+      } console.log(cifrado);
       }
-
-    } //for closure
-  }
-
-  //se cierra objeto cipher
-}
-
+          return cifrado; //Retorna cuantos espacios se va a desplazar para codificar el secreto
+  },
+//se declara function paradecodificar (decode):
+    decode : (descifrar, offset) => {
+        console.log("Inicio del descifrado")
+//Variables que nos ayudarán a descifrar el mensaje oculto
+        let descifrado = "";
+        let codeNumber = "";
+//iteraciones, descifrar.length determinará cuantas "vueltas" dará para encontrar el carácter correspondiente al descifrado de los carácteres ingresados
+      for(let i=0; i<descifrar.length; i++) {
+              console.log("El decodificado ha iniciado");
+//32 al 64 ASCII corresponde a los números y carácteres como "%&/())
+      if (descifrar[i].charCodeAt() >= 33 && descifrar[i].charCodeAt() <= 64) {
+          codeNumber = (descifrar[i]);
+          descifrado += codeNumber;
+          console.log(descifrado); //Muestra lo que hay en la variable en ese momento (relativo)
+          console.log("Número y/o simbolo decodificado")
+//123 al 254 ASCII  corresponde a carácteres como letras con acentos y carácteres llaves, entre otras cosas, por ejemplo: ñ{á}éçó
+      } else if (descifrar[i].charCodeAt() >= 123 && descifrar[i].charCodeAt() <= 254) {
+          codeNumber = (descifrar[i]);
+          descifrado += codeNumber;
+          console.log("Carácter Especial decodificado")
+//33 ASCII corresponde al "espacio"
+      } else if (descifrar[i].charCodeAt() == 32) {
+        let space = " ";
+          descifrado += space;
+          console.log("Espacio decodificado");
+//65 al 97 ASCII corresponde a las mayúsculas
+      } else if (descifrar[i].charCodeAt() >= 65 && descifrar[i].charCodeAt() <= 90) {
+        let upper = (descifrar[i].charCodeAt()- 90 - offset) % 26 + 90;
+        let codeNumber = String.fromCharCode(upper); //El String.fromCharCode() método estático que devuelve una cadena creada mediante el uso de una secuencia de valores Unicode especificada.
+          descifrado += codeNumber;
+          console.log("Mayúscula decodificada");
+          console.log(codeNumber);
+//97 al 122 corresponde a las minúsculas
+      } else if (descifrar[i].charCodeAt() >= 97 && descifrar[i].charCodeAt() <= 122) {
+        let minusculas = (descifrar[i].charCodeAt() - 122 - offset) % 26 + 122;
+        let codeNumber = String.fromCharCode(minusculas); //El String.fromCharCode() método estático que devuelve una cadena creada mediante el uso de una secuencia de valores Unicode especificada.
+          descifrado += codeNumber;
+          console.log("Minúscula decodificada");
+      }
+//Se finaliza el cifrado.
+          console.log("Mission Complete!!");
+      }
+        return descifrado;
+      }
+//se cierra objeto cipher
+    };

@@ -1,54 +1,156 @@
-#tutorial {
-    list-style-type: upper-roman;
-}
+/*Se pega la liga de la fuente que se utilizará*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+
+/*-------------------Se agregan los estilos a body-------------------------------*/
 
 body {
-    background: #000;
-    /*background-size: cover;
-    color: #FFF;*/
+    background-image: url(https://previews.123rf.com/images/christianp/christianp1502/christianp150200001/36248585-codificaci%C3%B3n-virus-inform%C3%A1tico.jpg);
+    -webkit-animation: marquee 100s infinite linear;
 }
+
+@-webkit-keyframes marquee {
+    0% {
+        background-position: 20;
+    }
+    100% {
+        background-position: -10000px;
+    }
+}
+
+
+/*-------------------Se agregan los estilos al header---------------------------*/
 
 header {
-    width: 100%;
-    height: 18vh;
-    background-color: #000;
+    width: 45%;
+    height: auto;
     color: #FFF;
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Roboto Mono', monospace;
+    ;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 15px;
+    padding: 2px;
+    border-radius: 10px;
+    opacity: 0.9;
+    display: block;
+    margin: auto;
+    font-size: 70%;
 }
 
+
+/*---------------------Se agregan los estios al main---------------------------*/
+
 main {
-    height: 40vh;
+    display: flex;
+    flex-flow: row wrap;
+    width: 45%;
+    justify-content: space-between;
+    height: 100%;
+    column-gap: 20px;
     /*min-height: calc(100vh -20vh -100px);*/
-    background-color: chartreuse;
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*border-radius: 40px;*/
+    opacity: 0.9;
+    font-family: 'Roboto Mono', monospace;
+    color: linen;
+    display: block;
+    margin: auto;
+}
+
+.instrucciones ol {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.instrucciones ol li {
+    text-align: justify;
+    font-size: 15px;
+    margin-left: 7%;
+    margin-right: 8%;
+    margin-top: 1%;
+}
+
+
+/*-------------botones---------------*/
+
+.botones {
+    text-align: center;
+    line-height: 220%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+/*--------cita y línea divisoria-----------*/
+
+.linea {
+    border-top: 1px solid black;
+    height: 2px;
+    width: 88%;
+    padding: 0;
+    margin: 20px auto 0 auto;
+}
+
+main section {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    font-size: 16px;
 }
 
 
 /*--------------------------------F O O T E R----------------------------------*/
 
 footer {
-    width: 100%;
-    height: 18vh;
-    background-color: #000;
+    width: 45%;
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     position: relative;
-    color: #FFF;
+    color: linen;
     text-align: center;
-    padding-top: 2%;
     padding-bottom: 1%;
+    /*border-radius: 20px;*/
+    opacity: 0.9;
+    font-family: 'Roboto Mono', monospace;
+    display: block;
+    margin: auto;
+    font-size: 15px;
 }
 
-#social ul {
-    display: flex;
-    flex-wrap: wrap;
+#social {
+    /*display: flex;
+    flex-wrap: wrap;*/
     list-style-type: none;
     justify-content: center;
+    font-size: 13px;
+    line-height: 135%;
+    margin-top: 1%;
 }
 
-#social ul a {
-    font-size: 30px;
-    margin: 0px 10px;
-    color: #8F00FF;
+#social a {
+    font-size: 13px;
+    margin: 1.5px;
+    color: rgb(12, 12, 141);
     position: relative;
+}
+
+#social a i {
+    color: rgba(156, 156, 160, 0.767);
 }

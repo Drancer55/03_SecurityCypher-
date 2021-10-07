@@ -1,28 +1,41 @@
-//función de cifrar
-let cifrado = () => {
-  alert("Funcion cifrado activada")
-//Variables con los datos ingresados por el usuario
-let inputText = document.getElementById('textoPorCifrar').value;
-let llave = document.getElementById('chooseNumber').value;
+//Se declara alerta de bienvenida
+alert("Hola, Bienvenido")
 
-console.log("valor del input: " + inputText + " llave: " + llave)
-
-  let offset = Number(llave.value)
-  typeof(offset)
-  console.log(typeof(offset))
-
-  document.getElementById('encodeM').innerHTML= "Tu mensaje codificado: " + cipher.encode(inputText, offset)
+//Se declara una variable para ocultar el contenido de nuestra página
+var ocultarMain = document.getElementById("ocultar"); //Se accede al Id desde JS
+console.log(ocultarMain) //Se utiliza el console.log para confirmar el funcionamiento en el browser
+ocultarMain.style.visibility = "hidden" //Se oculta main id(ocultar) desde JS
+//Cuando el usuario ingrese la clave correcta se desactivara la propiedad hidden
+let acceso = prompt("Ingresa tu clave")//se declara una variable para que el usuario ingrese su contraseña
+console.log(acceso) //Confirmamos ue funcione desde el browser
+//Se declara la clave correcta que el usuario deberá ingresar
+let clave = "12345"
+//Si el usuario ingresa la contraseña correcta se le concederá el acceso
+if(acceso === clave){
+    alert("Acceso Concedido")
+//si la clave es correcta omitir el estilo hidden
+ocultarMain.style.visibility = ""
+}else {
+    alert("Accesdo denegado")// Si el usuario ingresa una clave incorrecta se alertará el acceso denegado
 }
+//<Codificar \ Decodificar mensajes>
 
-//agregar una función al tag del btn
-document.getElementById('Codifica').addEventListener('click', (cifrado));
-
-/*
-//Arrow function de decifrado
-const decifrado = () => {
-let textl = texto.value;
+//Estos datos se asignan a las variables "text" y "llave" mediante los input en HTML con los que el usuario interatua en la UI
+let text = document.getElementById("toCipher");
+let llave = document.getElementById("chooseNumber");
+console.log(text);
+//se declara la function para cifrar el texto ingresado
+var cifra =() => {
+let cifrar = text.value;             //string
+let offset = parseInt(llave.value);  //number
+//se establece conexión con el ID del div en html para imprimr en pantalla el mensaje a cifrar
+document.getElementById('encodeM').innerHTML = "Tu mensaje cifra es: " + cipher.encode(cifrar, offset);
+}
+//Se declara la arrow function de la acción descifrar:
+var descifra = () => {
+let descifrar = text.value;
 let offset = parseInt(llave.value);
-document.getElementById('decodeM').innerHTML = "Tu mensaje descifrado: " + cipher.decode(textl,offset);
-console.log(cipher.decode(textl,offset));
+//Se establece conexión con el ID del div en html para imprimr en pantalla el mensaje a descifrar
+document.getElementById('decodeM').innerHTML = "Tu mensaje descifrado es:  \n "  + cipher.decode(descifrar, offset);
+console.log(cipher.decode(descifrar, offset));
 }
-*/
