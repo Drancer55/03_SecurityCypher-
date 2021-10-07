@@ -80,11 +80,12 @@ header * {
 /*---------------------Se agregan los estios al main---------------------------*/
 
 main {
-    display: flex;
+    /*display: flex;
     flex-flow: row wrap;
+    flex-direction: column;*/
     width: 45%;
     justify-content: space-between;
-    height: 100%;
+    height: auto;
     column-gap: 20px;
     /*min-height: calc(100vh -20vh -100px);*/
     background: #232526;
