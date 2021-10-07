@@ -9,14 +9,13 @@
 </head>
 
 <body>
-    <!--Se agrega la etiqueta header para agregar el titulo nuestra página-->
+    <!------------Se agrega la etiqueta header para agregar el titulo nuestra página------------------->
     <header>
         <h1>Caesar Cipher</h1>
     </header>
 
     <!------------Se agrega main para mantener unido el contenido principal del la página------------->
-    <main id="ocultar">
-        <!--Se agrega el Id coultar para acceder a el desde JS y activar la propiedad hidden-->
+    <main id="ocultar"><!--Se agrega el Id ocultar para acceder a el desde JS y activar la propiedad hidden-->
 
         <!-----------------------------Instrucciones de uso-------------------------------------------->
         <div class="instrucciones">
@@ -26,17 +25,17 @@
                 <li>Elige codificar y/o decodificar el mensaje</li>
             </ol>
         </div>
-        <!--Botones con los que vamos a jugar-->
+        <!-----------------Botones con los que vamos a jugar---------------------------------------------->
         <div class="botones">
             <input type="password" id="chooseNumber" placeholder="Introduce tu número de llave">
             <input type="text" id="cipher" placeholder="Escribe el texto que quieras cifrar">
             <input type="button" value="Codifica este mensaje" onclick="cifrado()">
             <input type="button" value="Decodifica este mensaje" onclick="decifrado()">
         </div>
-        <!--Se escriben los resultados en el HTML-->
+        <!------------------------Se escriben los resultados en el HTML------------------------------------>
         <div id="encodeM"></div>
         <div id="decodeM"></div>
-        <!--Cita de Julio César-->
+        <!------------------------------------Cita de Julio César------------------------------------------->
 
         <section>
             <div>"Veni, vidi, vici"</div>
